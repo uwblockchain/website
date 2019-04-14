@@ -1,5 +1,5 @@
 {
   "version": 2,
   "name": "Blockchain Society at the UW",
-  "alias": "uwblockchain.org"
+  "alias": ["uwblockchain.org", "www.uwblockchain.org"]
 }
