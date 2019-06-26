@@ -161,6 +161,7 @@ a:hover {
   padding-right: 0px;
   float: none;
   text-align: left;
+    max-height: 20em
 }
 
 .heading {
@@ -565,4 +566,25 @@ a:hover {
   -ms-grid-row-span: 1;
   grid-row-end: 3;
 }
+
+.btn-primary {
+    color: white;
+    background: #5b4dab;
+    border: none;
+    padding: .6em;
+    font-size: 1.4rem;
+    text-decoration: none;
+margin-left: 1em
+}
+.btn-primary:hover {
+    color: white;
+    background: #5b4dab;
+    border: none;
+    padding: .6em;
+    font-size: 1.4rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 
