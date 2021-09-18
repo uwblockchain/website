@@ -10,11 +10,17 @@ body {
 }
 
 .nav-link:hover {
-  margin-right: 10px;
-  margin-left: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  /* margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px; */
   border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+
+.btn {
+  margin-right: 70px;
+  margin-left: 70px;
 }
 
 
