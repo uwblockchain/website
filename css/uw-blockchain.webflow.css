@@ -19,7 +19,7 @@ h1 {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
@@ -28,7 +28,11 @@ a:hover {
 }
 
 .navbar {
-  background-color: #5b4dab;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #1D1D1D;
 }
 
 .navbar.header {
