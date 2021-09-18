@@ -1,3 +1,20 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 8px 6px -6px #1D1D1D;
+  height: 70px;
+}
+
+.nav-link:hover {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 2px solid #fff;
+}
+
+
