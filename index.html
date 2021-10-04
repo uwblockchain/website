@@ -20,7 +20,23 @@
       UW Blockchain Society
     </title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
+    <!-- Calendar bootstrap -->
+    <link
+    rel="stylesheet"
+    href="bootstrap.min.css"
+  />
+  <link
+  rel="stylesheet"
+  href="jquery-3.3.1.slim.min.js"
+/>
+<link
+rel="stylesheet"
+href="bootstrap.bundle.min.js"
+/>
+<link
+rel="stylesheet"
+href="font-awesome.min.css"
+/>
     <!-- Favicon -->
     <link
       rel="icon"
@@ -82,7 +98,10 @@
                     <a class="nav-link" href="#call-to-action-call-to-action-2">Get Involved</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#events">Events</a>
+                    <a class="nav-link" href="#announcements">Announcements</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#calendar">Calendar</a>
                   </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#call-to-action-call-to-action-3">Contact Us</a>
@@ -271,13 +290,13 @@
       </section>
     </div>
     <!-- End CTA -->
-    <!-- Events -->
-    <div id="events" >
+    <!-- Announcements -->
+    <div id="announcements" >
       <section class="slice slice-lg bg-gradient-dark">
         <div class="container ">
           <div class="row row-grid align-items-center">
             <div class="col-lg-5 order-lg-1 ml-lg-auto">
-              <h1 class="mt-2 text-white">Events, Workshops, <br>& Meetings</h1>
+              <h1 class="mt-2 text-white">Annoucements</h1>
               <p class="lead mt-4 text-white">Our annual kickoff meeting, WTF is Blockchain, will be held Saturday,
                 October 9th from 4:30pm - 6:00pm at Savery Hall, room 260. This event is taking place on the UW Seattle campus,
                 but it is a tri-campus event. We also welcome sponsors, faculty, and anoyone interested in blockchain
@@ -297,7 +316,157 @@
       </section>
     </div>
   </div>
-    <!-- End Events -->
+    <!-- End Announcements -->
+     <!-- Calendar -->
+      <div class="container py-5" id="calendar">
+
+        <!-- For Demo Purpose -->
+        <header class="text-center text-white mb-5">
+          <h1 class="display-4">Events Calendar</h1>
+          <p class="font-italic mb-0">A nicely-designed Bootstrap calendar widget. This calendar is just a for design purpose, you can make it work.</p>
+          <p class="font-italic">Snippet By <a href="https://bootstrapious.com" class="text-white">
+              <u>Bootstrapious</u></a>
+          </p>
+        </header>
+
+
+        <!-- Calendar -->
+        <div class="calendar shadow bg-white p-5">
+          <div class="d-flex align-items-center"><i class="fa fa-calendar fa-3x mr-3"></i>
+            <h2 class="month font-weight-bold mb-0 text-uppercase">October 2021</h2>
+          </div>
+          <p class="font-italic text-muted mb-5">No events for this day.</p>
+          <ol class="day-names list-unstyled">
+            <li class="font-weight-bold text-uppercase">Sun</li>
+            <li class="font-weight-bold text-uppercase">Mon</li>
+            <li class="font-weight-bold text-uppercase">Tue</li>
+            <li class="font-weight-bold text-uppercase">Wed</li>
+            <li class="font-weight-bold text-uppercase">Thu</li>
+            <li class="font-weight-bold text-uppercase">Fri</li>
+            <li class="font-weight-bold text-uppercase">Sat</li>
+          </ol>
+
+          <ol class="days list-unstyled">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>
+              <div class="date">1</div>
+            </li>
+            <li>
+              <div class="date">2</div>
+            </li>
+            <li>
+              <div class="date">3</div>
+            </li>
+            <li>
+              <div class="date">4</div>
+            </li>
+            <li>
+              <div class="date">5</div>
+            </li>
+            <li>
+              <div class="date">6</div>
+            </li>
+            <li>
+              <div class="date">7</div>
+            </li>
+            <li>
+              <div class="date">8</div>
+            </li>
+            <li>
+              <div class="date">9</div>
+              <div class="event bg-success">Kickoff Event</div>
+            </li>
+            <li>
+              <div class="date">10</div>
+            </li>
+            <li>
+              <div class="date">11</div>
+            </li>
+            <li>
+              <div class="date">12</div>
+            </li>
+            <li>
+              <div class="date">13</div>
+            </li>
+            <li>
+              <div class="date">14</div>
+              <div class="event bg-success">Event with BAF</div>
+            </li>
+            <li>
+              <div class="date">15</div>
+              <div class="event bg-success">Officer applications due</div>
+            </li>
+            <li>
+              <div class="date">16</div>
+            </li>
+            <li>
+              <div class="date">17</div>
+            </li>
+            <li>
+              <div class="date">18</div>
+            </li>
+            <li>
+              <div class="date">19</div>
+            </li>
+            <li>
+              <div class="date">20</div>
+            </li>
+            <li>
+              <div class="date">21</div>
+              <!-- <div class="event bg-primary">Event Name</div>
+              <div class="event bg-success">Event Name</div> -->
+            </li>
+            <li>
+              <div class="date">22</div>
+              <div class="event bg-success">Workshop with Conflux</div>
+            </li>
+            <li>
+              <div class="date">23</div>
+            </li>
+            <li>
+              <div class="date">24</div>
+            </li>
+            <li>
+              <div class="date">25</div>
+            </li>
+            <li>
+              <div class="date">26</div>
+            </li>
+            <li>
+              <div class="date">27</div>
+            </li>
+            <li>
+              <div class="date">28</div>
+            </li>
+            <li>
+              <div class="date">29</div>
+            </li>
+            <li>
+              <div class="date">30</div>
+            </li>
+            <li>
+              <div class="date">31</div>
+            </li>
+            <li class="outside">
+              <div class="date">1</div>
+            </li>
+            <li class="outside">
+              <div class="date">2</div>
+            </li>
+            <li class="outside">
+              <div class="date">3</div>
+            </li>
+            <li class="outside">
+              <div class="date">4</div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- End Calendar -->
         <!--Sponsors -->
         <!-- <div id="sponsors" >
           <section class="slice slice-lg">
