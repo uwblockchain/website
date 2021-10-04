@@ -367,6 +367,13 @@ a:hover {
   margin: auto;
 }
 
+#sponsors h1 {
+  color: #5a00ad;
+  visibility: hidden;
+  box-shadow: 30px 10px 4px #4444dd;
+}
+
+
 .html-embed {
   margin-right: auto;
   margin-left: auto;
