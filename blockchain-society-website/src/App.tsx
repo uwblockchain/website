@@ -1,47 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles/App.scss";
-import CSS from "csstype";
-import { Parallax, Background } from "react-parallax";
-import image from "./images/uw_quad.jpg";
-
-const inlineStyle: CSS.Properties = {
-  left: "50%",
-  top: "50%",
-  position: "absolute",
-  transform: "translate(-50%,-50%)",
-};
+import Hero from "./components/home/Hero/Hero";
+import FadeIn from "react-fade-in";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import Faq from "./components/home/Faq/Faq";
 
 function App() {
-  return (
-    <div className="App font-inter ">
-      {/** Parallax Background */}
-      <div className="h-screen">
-        <div className="absolute bg-black h-screen w-screen opacity-75"></div>
-        <Parallax strength={200} className="opacity-25 h-screen w-screen">
-          <Background className="custom-bg w-screen">
-            <img
-              src={image}
-              alt="UW Quad"
-              className="w-screen h-screen object-cover"
-            />
-          </Background>
-        </Parallax>
-        {/** Content */}
-        <div className="absolute transform" style={inlineStyle}>
-          <h1 className="text-white font-bold">UW Blockchain Society</h1>
-          <p className="text-base md:text-2xl md:max-w-750 mt-5 text-center mx-auto text-gray-300 font-semibold tracking-tight leading-115p">
-            Welcome to UW Blockchain Society! We are a tri-campus organization
-            that aims to provide blockchain education to the masses.
-          </p>
-        </div>
-      </div>
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
-      <div className="h-screen">QA</div>
-      <div className="h-screen">Organization Details</div>
-      <div className="h-screen">Sponsors and Students CTA</div>
-      <div className="h-screen">Announcements</div>
-      <div className="h-screen">Events</div>
-      <div className="h-screen">Contacts</div>
+  return (
+    <div className="font-inter overflow-x-hidden App ">
+      <Hero></Hero>
+
+      <Faq></Faq>
+
+      <div className="h-screen text-4xl bg-blue-900 align-middle">
+        Organization Details
+      </div>
+      <div className="h-screen text-4xl">Sponsors and Students CTA</div>
+      <div className="h-screen text-4xl bg-blue-900 align-middle">
+        Announcements
+      </div>
+      <div className="h-screen text-4xl">Events</div>
+      <div className="h-96 text-4xl bg-blue-900 align-middle">Contacts</div>
+      <div className="h-36 text-4xl bg-blue-500 align-middle">Bottom Bar</div>
     </div>
   );
 }
