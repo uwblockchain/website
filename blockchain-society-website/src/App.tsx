@@ -15,7 +15,7 @@ function App() {
     <div className="font-inter overflow-x-hidden App ">
       <Hero></Hero>
 
-      <Faq></Faq>
+      {/* <Faq></Faq> */}
 
       <div className="h-screen text-4xl bg-blue-900 align-middle">
         Organization Details
