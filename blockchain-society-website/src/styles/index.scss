@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -22,7 +20,7 @@ code {
   h1 {
     @apply text-6xl;
     @screen md {
-      @apply text-8xl;
+      @apply text-7xl;
     }
   }
   h2 {

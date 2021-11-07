@@ -10,7 +10,6 @@ import Events from "./components/home/Events/Events";
 import Upcoming from "./components/home/Upcoming/Upcoming";
 import Footer from "./components/home/Footer/Footer";
 
-
 function App() {
   useEffect(() => {
     AOS.init();
@@ -20,7 +19,7 @@ function App() {
     <div className="font-inter overflow-x-hidden App ">
       <Hero></Hero>
 
-      <Faq></Faq>
+      {/* <Faq></Faq> */}
 
       <About></About>
       <div className="h-screen text-4xl">Sponsors and Students CTA</div>
