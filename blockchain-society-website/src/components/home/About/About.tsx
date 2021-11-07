@@ -3,7 +3,7 @@ import art0 from "../../../images/stock/uwbsart1.png";
 
 function About() {
   return (
-    <Container className="text-4xl bg-indigo-900 align-middle py-10">
+    <Container className="text-4xl bg-indigo-900 align-middle py-10" id="about">
       <div className="lg:grid lg:grid-cols-2 lg:pl-36">
         <div className="flex justify-center">
           <div className="text-center text-white px-4 lg:w-3/4">

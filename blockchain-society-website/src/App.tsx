@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/App.scss";
 import Hero from "./components/home/Hero/Hero";
 import FadeIn from "react-fade-in";
 import "aos/dist/aos.css";
 import AOS from "aos";
+
+import Nav from "./components/home/Nav/Nav";
+import Dropdown from "./components/home/Nav/Dropdown";
+
 import About from "./components/home/About/About";
 import Faq from "./components/home/Faq/Faq";
 import Events from "./components/home/Events/Events";
@@ -11,15 +15,35 @@ import Upcoming from "./components/home/Upcoming/Upcoming";
 import Footer from "./components/home/Footer/Footer";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     AOS.init();
+
+    const hideMenu = () => {
+      if (window.innerWidth > 768 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", hideMenu);
+
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
   }, []);
 
   return (
     <div className="font-inter overflow-x-hidden App ">
+      <Nav toggle={toggle}></Nav>
+      <Dropdown isOpen={isOpen} toggle={toggle}></Dropdown>
       <Hero></Hero>
 
-      {/* <Faq></Faq> */}
+      <Faq></Faq>
 
       <About></About>
       <div className="h-screen text-4xl">Sponsors and Students CTA</div>
