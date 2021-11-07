@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@react-icons/all-files": "^4.1.0",
+    "@tippyjs/react": "^4.2.6",
     "@types/aos": "^3.0.4",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.9",
