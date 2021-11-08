@@ -8,7 +8,7 @@ import Faq from "./components/home/Faq/Faq";
 import Events from "./components/home/Events/Events";
 import Upcoming from "./components/home/Upcoming/Upcoming";
 import Footer from "./components/home/Footer/Footer";
-
+import Nav from "./components/home/Nav/Nav";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -16,6 +16,7 @@ function App() {
 
   return (
     <div className="font-inter overflow-x-hidden App ">
+      <Nav></Nav>
       <Hero></Hero>
 
       {/* <Faq></Faq> */}
