@@ -10,16 +10,16 @@ function Events() {
   }, []);
   
   return (
-    <div 
+    <div
       className="p-6"
       data-aos="fade-up"
       data-aos-duration="500"
     >
       <Container>
-        <span 
-        className="text-4xl"
-        data-aos="fade-up"
-        data-aos-duration="550"
+        <span
+          className="text-4xl"
+          data-aos="fade-up"
+          data-aos-duration="550"
         >Our Programs</span>
         <Row className="flex justify-center content-center bg-yellow px-16">
           <Col className="py-4">
