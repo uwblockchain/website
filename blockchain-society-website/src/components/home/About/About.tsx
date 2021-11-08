@@ -1,15 +1,25 @@
-import { Container, Row, Col } from "react-bootstrap";
 import art0 from "../../../images/stock/uwbsart1.png";
+import bg_uwquad from "../../../images/stock/uw_quad.jpg";
 
 function About() {
   return (
-    <Container className="text-4xl bg-indigo-900 align-middle py-10" id="about">
-      <div className="lg:grid lg:grid-cols-2 lg:pl-36">
+    <div
+      className="w-screen text-4xl bg-indigo-900 align-middle pb-10"
+      id="about"
+    >
+      <div className="relative overflow-hidden flex justify-center items-center">
+        <h3 className="z-10 absolute w-full text-4xl text-white text-center font-semibold">About Us</h3>
+        <img
+          alt="uw_quad"
+          className="h-36 lg:h-72 w-full opacity-25 object-cover"
+          src={bg_uwquad}
+        ></img>
+      </div>
+      <div className="pt-8 lg:grid lg:grid-cols-2 lg:pl-36">
         <div className="flex justify-center">
           <div className="text-center text-white px-4 lg:w-3/4">
-            <h3 className="text-4xl">About Us</h3>
-            <h3 className="text-2xl">A tri-campus organization.</h3>
-            <p className="text-lg text-left">
+            <h3 className="text-2xl pb-2">A tri-campus organization.</h3>
+            <p className="text-lg text-left leading-loose">
               Composed of students from all three UW Campuses, the Blockchain
               Society at UW unites students with a common interest across the
               three campuses. A tri-campus organization is a new breed for
@@ -22,7 +32,7 @@ function About() {
           <img src={art0} alt="art0" className="w-80"></img>
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 
