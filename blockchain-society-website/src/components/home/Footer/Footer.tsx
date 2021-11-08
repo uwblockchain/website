@@ -5,13 +5,21 @@ import {
   FaGithubSquare,
 } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import { useEffect } from "react";
+import AOS from "aos";
 // import "../../../styles/variables/Palette.scss";
 
 function Footer() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="h-52 mt-4 divide-y">
-      <div>
-        <p className="text-xl font-bold">CONTACT US</p>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="500">
+        <p className="text-xl font-bold">
+          CONTACT US</p>
         <p>Want to get involved? Want to learn more? Have questions or comments? Reach out to us!</p>
         <a
           href="mailto: blockchn@uw.edu"
