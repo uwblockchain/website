@@ -7,6 +7,7 @@ import AOS from "aos";
 import Faq from "./components/home/Faq/Faq";
 import Events from "./components/home/Events/Events";
 import Upcoming from "./components/home/Upcoming/Upcoming";
+import Footer from "./components/home/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
     <div className="font-inter overflow-x-hidden App ">
       <Hero></Hero>
 
-      <Faq></Faq>
+      {/* <Faq></Faq> */}
 
       <div className="h-screen text-4xl bg-blue-900 align-middle">
         Organization Details
@@ -31,7 +32,8 @@ function App() {
       <Upcoming></Upcoming>
 
       <div className="h-96 text-4xl bg-blue-900 align-middle">Contacts</div>
-      <div className="h-36 text-4xl bg-blue-500 align-middle">Bottom Bar</div>
+      <Footer></Footer>
+      {/* <div className="h-36 text-4xl bg-blue-500 align-middle">Bottom Bar</div> */}
     </div>
   );
 }
