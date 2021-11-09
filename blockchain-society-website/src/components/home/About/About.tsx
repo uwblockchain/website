@@ -8,17 +8,21 @@ function About() {
       id="about"
     >
       <div className="relative overflow-hidden flex justify-center items-center">
-        <h3 className="z-10 absolute w-full text-4xl text-white text-center font-semibold">About Us</h3>
+        <h3 className="z-10 absolute w-full text-4xl text-white text-center font-semibold">
+          About Us
+        </h3>
         <img
           alt="uw_quad"
-          className="h-36 lg:h-72 w-full opacity-25 object-cover"
+          className="h-36 lg:h-48 w-full opacity-25 object-cover"
           src={bg_uwquad}
         ></img>
       </div>
-      <div className="pt-8 lg:grid lg:grid-cols-2 lg:pl-36">
+      <div className="pt-8 lg:grid lg:grid-cols-2 lg:pl-36 ">
         <div className="flex justify-center">
-          <div className="text-center text-white px-4 lg:w-3/4">
-            <h3 className="text-2xl pb-2">A tri-campus organization.</h3>
+          <div className="text-center text-white px-4 lg:w-3/4 content-center">
+            <h3 className="text-2xl py-8 text-left font-semibold">
+              A tri-campus organization.
+            </h3>
             <p className="text-lg text-left leading-loose">
               Composed of students from all three UW Campuses, the Blockchain
               Society at UW unites students with a common interest across the

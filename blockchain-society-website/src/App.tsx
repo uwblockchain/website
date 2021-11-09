@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./styles/App.scss";
+import "./styles/variables/Palette.scss";
 import Hero from "./components/home/Hero/Hero";
-import FadeIn from "react-fade-in";
 import "aos/dist/aos.css";
 import AOS from "aos";
-
-import Nav from "./components/home/Nav/Nav";
 import Dropdown from "./components/home/Nav/Dropdown";
-
 import About from "./components/home/About/About";
 import Faq from "./components/home/Faq/Faq";
 import Events from "./components/home/Events/Events";
 import Upcoming from "./components/home/Upcoming/Upcoming";
 import Footer from "./components/home/Footer/Footer";
 import Nav from "./components/home/Nav/Nav";
+import background from "./images/gradient_background.jpeg";
+
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,23 +37,29 @@ function App() {
   }, []);
 
   return (
-    <div className="font-inter overflow-x-hidden App ">
+    <div className="font-inter overflow-x-hidden App overflow-hidden ">
       <Nav toggle={toggle}></Nav>
       <Dropdown isOpen={isOpen} toggle={toggle}></Dropdown>
       <Hero></Hero>
 
-      <Faq></Faq>
+      {/* <Faq></Faq> */}
+      <div className="purple h-96 w-screen flex items-center justify-center">
+        <h2 className="text-white italic font-semibold">
+          Our mission is our north star, it should determine our pillars and
+          rarely change
+        </h2>
+      </div>
 
       <About></About>
-      <div className="h-screen text-4xl">Sponsors and Students CTA</div>
+      {/* <div className="h-screen text-4xl">Sponsors and Students CTA</div>
       <div className="h-screen text-4xl bg-blue-900 align-middle">
         Announcements
-      </div>
+      </div> */}
       {/* <div className="h-screen text-4xl">Events</div> */}
       <Events></Events>
       <Upcoming></Upcoming>
 
-      <div className="h-96 text-4xl bg-blue-900 align-middle">Contacts</div>
+      {/* <div className="h-96 text-4xl bg-blue-900 align-middle">Contacts</div> */}
       <Footer></Footer>
       {/* <div className="h-36 text-4xl bg-blue-500 align-middle">Bottom Bar</div> */}
     </div>

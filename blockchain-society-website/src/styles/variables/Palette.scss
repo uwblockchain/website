@@ -1,4 +1,5 @@
 $purple: rgb(49, 46, 129);
+$darkPurple: #20082b;
 
 // change the theme
 $theme-colors: (
@@ -7,6 +8,9 @@ $theme-colors: (
 );
 $primary: $purple;
 
+.purple {
+  background-color: $darkPurple;
+}
 
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
