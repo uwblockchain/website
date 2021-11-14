@@ -9,13 +9,7 @@ import { Fade } from "react-bootstrap";
 function Hero() {
   return (
     <div className="h-screen relative">
-      {/** Parallax Background */}
-      <div className="absolute bg-black h-screen w-screen"></div>
-      <img
-        src={background}
-        alt="UW Quad"
-        className="w-screen h-screen object-cover opacity-25 absolute"
-      />
+      <div className="bg-black absolute h-screen w-screen"></div>
       <Parallax strength={200} className=" h-screen w-screen absolute ">
         <FadeIn>
           <Background className="custom-bg w-screen  h-screen ">
