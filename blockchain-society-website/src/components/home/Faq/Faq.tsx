@@ -19,6 +19,7 @@ function Faq() {
       className="m-16 items-center"
       data-aos="fade-up"
       data-aos-duration="500"
+      id="faq"
     >
       <h2>Frequently Asked Questions</h2>
       <p
