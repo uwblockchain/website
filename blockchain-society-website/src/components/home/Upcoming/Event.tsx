@@ -20,9 +20,9 @@ function Event({ title, type, time, month, day, location }: any) {
         <span className="text-red-600 font-light pl-4">{type}</span>
         <span className="font-semibold pl-4">{title}</span>
         <div className="pl-4 flex">
-          <FaRegClock className="relative top-1"/>
+          <FaRegClock className="relative top-1" />
           <span className="mx-2">{time}</span>
-          <FaMapPin className="relative top-1"/>
+          <FaMapPin className="relative top-1" />
           <span className="mx-2">{location}</span>
         </div>
       </div>

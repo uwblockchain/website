@@ -8,18 +8,31 @@ function Upcoming() {
     AOS.init();
   }, []);
   return (
-    <div 
-    className="text-left pt-50%"
-    data-aos="fade-right"
-    data-aos-duration="550"
+    <div
+      className="text-left pt-50%"
+      data-aos="fade-right"
+      data-aos-duration="550"
     >
       <Container>
-          <Row>
-              <Event title="Reprogram The World With Conflux Blockchain Workshop" type="Workshop" time="4:00 pm PST" month="OCT" day="25"></Event>
-          </Row>
-          <Row>
-              <Event title="Crypto, Trading, & Defi Summit" type="Speaker Event" time="6:00 pm PST" month="NOV" day="4" location="Savery Hall 260"></Event>
-          </Row>
+        <Row>
+          <Event
+            title="Reprogram The World With Conflux Blockchain Workshop"
+            type="Workshop"
+            time="4:00 pm PST"
+            month="OCT"
+            day="25"
+          ></Event>
+        </Row>
+        <Row>
+          <Event
+            title="Crypto, Trading & Defi Summit"
+            type="Speaker Event"
+            time="6:00 pm PST"
+            month="NOV"
+            day="4"
+            location="Savery Hall 260"
+          ></Event>
+        </Row>
       </Container>
     </div>
   );

@@ -4,6 +4,7 @@ import "./styles/variables/Palette.scss";
 import Hero from "./components/home/Hero/Hero";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Statement from "./components/home/Statement/Statement";
 import Dropdown from "./components/home/Nav/Dropdown";
 import About from "./components/home/About/About";
 import Faq from "./components/home/Faq/Faq";
@@ -41,14 +42,8 @@ function App() {
       <Nav toggle={toggle}></Nav>
       <Dropdown isOpen={isOpen} toggle={toggle}></Dropdown>
       <Hero></Hero>
-
+      <Statement />
       {/* <Faq></Faq> */}
-      <div className="purple h-96 w-screen flex items-center justify-center">
-        <h2 className="text-white italic font-semibold">
-          Our mission is our north star, it should determine our pillars and
-          rarely change
-        </h2>
-      </div>
 
       <About></About>
       {/* <div className="h-screen text-4xl">Sponsors and Students CTA</div>
