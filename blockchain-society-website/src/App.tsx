@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   return (
-    <div className="font-inter overflow-x-hidden App overflow-hidden ">
+    <div className="font-inter overflow-x-hidden App overflow-visible">
       <Nav toggle={toggle}></Nav>
       <Dropdown isOpen={isOpen} toggle={toggle}></Dropdown>
       <Hero></Hero>

@@ -7,7 +7,6 @@ import {
 import { IconContext } from "react-icons/lib";
 import { useEffect } from "react";
 import AOS from "aos";
-// import "../../../styles/variables/Palette.scss";
 
 function Footer() {
   useEffect(() => {
@@ -28,9 +27,8 @@ function Footer() {
           <p>blockchn@uw.edu</p>
         </a>
       </div>
-      <div className="lg:flex lg:justify-between lg:mx-10 py-4">
+      <div className="lg:flex lg:justify-between lg:mx-10 py-2">
         <p>© UW Blockchain Society. 2021. All rights reserved.</p>
-
         <div className="flex justify-center">
           <IconContext.Provider value={{ size: "36px" }}>
             <FaFacebookSquare className="mr-4 transform hover:scale-110" />
