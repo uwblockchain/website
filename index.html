@@ -14,12 +14,29 @@
   <title>
     UW Blockchain Society
   </title>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <!-- Calendar bootstrap -->
   <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="jquery-3.3.1.slim.min.js" />
+  <link rel="stylesheet" href="bootstrap.bundle.min.js" />
   <link rel="stylesheet" href="font-awesome.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" type="image/png" />
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="./assets/libs/@fortawesome/fontawesome-free/css/all.min.css" />
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="./assets/libs/animate.css/animate.min.css" />
+  <link rel="stylesheet" href="./assets/libs/swiper/dist/css/swiper.min.css" />
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+  <!-- Purpose CSS -->
   <link rel="stylesheet" href="./assets/css/purpose.css" id="stylesheet" />
+  <!-- non template -->
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet" />
   <link href="./css/uwbs.css" rel="stylesheet" />
+  <!-- <link href="./css/uw-blockchain.webflow.css" rel="stylesheet"> -->
   <script src="assets/js/purpose.js"></script>
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/js/purpose.core.js"></script>
 </head>
 
 <body>
@@ -29,8 +46,11 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li>
+          <p class="nav-link" href=""> <span class="sr-only"></span></p>
+        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#blog-blog-5">About</a>
@@ -38,104 +58,344 @@
         <li class="nav-item active">
           <a class="nav-link" href="#call-to-action-call-to-action-2">Get Involved</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="team.html">Team Members</a>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#announcements">Announcements</a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#calendar">Calendar</a>
+        </li> -->
         <li class="nav-item active">
           <a class="nav-link" href="#call-to-action-call-to-action-3">Contact Us</a>
         </li>
+        <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#sponsors">Sponsors</a>
+                  </li> -->
       </ul>
     </div>
   </nav>
+  <section class="slice slice-lg bg-section-dark" data-offset-top="#header-main">
+    <!-- SVG background -->
+    <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
+      <figure class="w-100">
+        <img alt="Image placeholder" src="./assets/img/backgrounds/uwbscover.jpg" class="svg-inject"
+          style="opacity: 0.25;" />
+      </figure>
+    </div>
+    <div class="py-6 py-xl-9">
+      <div class="container position-relative zindex-100">
+        <div class="col px-0">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="images/uwbclong.png" style="width: 100%;" />
 
-  <!-- Team Section -->
-  <div id="team-members">
+              <p class="lead text-white mt-4">
+                Subscribe to our newsletter for event updates, hackathons, & more!
+              </p>
+
+              <div style="">
+                <form
+                  action="https://uwblockchain.us18.list-manage.com/subscribe/post?u=0084ade801812a4cea06b05e0&amp;id=b939cae676"
+                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
+                  novalidate class="input-group input-group-md input-group-merge rounded-pill bg-white">
+                  <input type="email" class="text-field w-input form-control form-control-flush" maxlength="256"
+                    name="EMAIL" data-name="Email" placeholder="Enter your email address" id="email" required="" />
+                  <div class="input-group-append">
+                    <button class="btn btn-white" type="submit">
+                      <span class="fas fa-paper-plane"></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- End Header -->
+  <!-- Collapse 1 -->
+  <div id="collapse-collapse-1" title="collapse/collapse-1.html">
     <section class="slice slice-lg bg-section-secondary">
-      <div class="container text-center">
-        <h3 class="mt-4">Meet Our Team</h3>
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h3 class=" mt-4">Welcome</h3>
+          <div class="fluid-paragraph mt-3">
+            <p class="lead lh-180">Welcome to UW Blockchain Society! We are a tri-campus organization that aims to
+              provide blockchain education to the masses.</p>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-md-4 text-center">
-            <img src="images/member1.jpg" class="rounded-circle img-fluid" width="150">
-            <h3>John Doe</h3>
-            <p>President</p>
+          <div class="col-xl-6">
+            <div id="accordion-1" class="accordion accordion-spaced">
+              <!-- Accordion card 1 -->
+              <div class="card">
+                <div class="card-header py-4" id="heading-1-1" data-toggle="collapse" role="button"
+                  data-target="#collapse-1-1" aria-expanded="false" aria-controls="collapse-1-1">
+                  <h6 class="mb-0"><i class="fas fa-link mr-3"></i>What is blockchain?</h6>
+                </div>
+                <div id="collapse-1-1" class="collapse" aria-labelledby="heading-1-1" data-parent="#accordion-1">
+                  <div class="card-body">
+                    <p>At its most basic level, blockchain is literally just a chain of blocks. These blocks hold data
+                      and are linked to each other. The 'block' of data is stored on the 'chain'; which is a public
+                      database. Some features of the blockchain include immutability, transparency, and more!</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion card 2 -->
+              <div class="card">
+                <div class="card-header py-4" id="heading-1-2" data-toggle="collapse" role="button"
+                  data-target="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+                  <h6 class="mb-0"><i class="fab fa-bitcoin mr-3"></i>Wait? So what's a cryptocurrency?</h6>
+                </div>
+                <div id="collapse-1-2" class="collapse" aria-labelledby="heading-1-2" data-parent="#accordion-1">
+                  <div class="card-body">
+                    <p>A cryptocurrency is a digital currency that uses secure methods of cryptography. They are
+                      difficult to change or counterfeit because of this security feature. Cryptocurrencies are usually
+                      built on blockchain technology.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="col-md-4 text-center">
-            <img src="images/member2.jpg" class="rounded-circle img-fluid" width="150">
-            <h3>Jane Smith</h3>
-            <p>Vice President</p>
-          </div>
-          <div class="col-md-4 text-center">
-            <img src="images/member3.jpg" class="rounded-circle img-fluid" width="150">
-            <h3>Alex Brown</h3>
-            <p>Marketing Lead</p>
+          <div class="col-xl-6">
+            <div id="accordion-2" class="accordion accordion-spaced">
+              <!-- Accordion card 1 -->
+              <div class="card">
+                <div class="card-header py-4" id="heading-2-1" data-toggle="collapse" role="button"
+                  data-target="#collapse-2-1" aria-expanded="false" aria-controls="collapse-2-1">
+                  <h6 class="mb-0"><i class="fas fa-university mr-3"></i>What is UW Blockchain Society?</h6>
+                </div>
+                <div id="collapse-2-1" class="collapse" aria-labelledby="heading-2-1" data-parent="#accordion-2">
+                  <div class="card-body">
+                    <p>We are a tri-campus organization that aims to educate the masses on all things blockchain. Our
+                      members are involved in conferences, educational events, programming and more. We provide the best
+                      education, mentorship, career tracking and more to our hundreds of members.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion card 2 -->
+              <div class="card">
+                <div class="card-header py-4" id="heading-2-2" data-toggle="collapse" role="button"
+                  data-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+                  <h6 class="mb-0"><i class="far fa-handshake mr-3"></i>How do I get involved?</h6>
+                </div>
+                <div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
+                  <div class="card-body">
+                    <p>Join our <a href="https://discord.gg/rarJ9QpyMb">Discord server</a>, follow our <a href="https://twitter.com/udubblockchain">Twitter</a>, or check out our <a href="https://www.instagram.com/uwblockchain/">Instagram</a>.
+                      Sponsors can get involved <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfqdJegvu7M1IBkPDO9hcad7KWWb2bf_FYTCmhar6tjZRd45Q/viewform?usp=sf_link">here</a>
+                      and students can get involved <a
+                        href="https://discord.gg/AwP9t9SsZs">here</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </section>
   </div>
-
+  </div>
+  <!-- About -->
+  <div id="blog-blog-5">
+    <section class="slice slice-lg bg-gradient-dark">
+      <div class="container ">
+        <div class="row row-grid align-items-center">
+          <div class="col-lg-5 order-lg-1 ml-lg-auto">
+            <h3 class="mt-2 text-white">A tri-campus organization.</h3>
+            <p class="lead mt-4 text-white">Composed of students from all three UW Campuses, the Blockchain Society at
+              UW unites students with a common interest across the three campuses. A tri-campus organization is a new
+              breed for student clubs. Utilizing the resources and students across all three UW campuses we aim to
+              revolutionize blockchain education.</p>
+          </div>
+          <div class="col-lg-6 order-lg-2" style="padding-left: 10%;">
+            <img alt="Image placeholder" src="images/uwbsart1.png" class="" style="width: 80%">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  <!-- End About -->
+  <!-- Call to action -->
+  <div id="call-to-action-call-to-action-2" title="call-to-action/call-to-action-2.html">
+    <section class="slice slice-lg">
+      <div class="container">
+        <div class="text-center">
+          <h1>Want to be a part of our mission?</h1>
+          <div class="fluid-paragraph mt-4">
+            <p class="lead text-muted lh-180">
+              Our primary mission is to provide students with education, community, and opportunties within the field of
+              blockchain.
+              Our club is looking to recruit UW students who are engaged, dedicated, and creative to join our team. We
+              also rely on our
+              sponsors to support our organization. Please select your role below to fill out a registration form.
+              Thank you for being a part of our mission!
+            </p>
+            <a href="https://discord.gg/rarJ9QpyMb"
+              class="btn btn-dark btn-icon rounded-pill hover-scale-110 mt-5">
+              <span class="btn-inner--text">Students</span>
+              <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqdJegvu7M1IBkPDO9hcad7KWWb2bf_FYTCmhar6tjZRd45Q/viewform?usp=sf_link"
+                class="btn btn-dark btn-icon rounded-pill hover-scale-110 mt-5">
+                <span class="btn-inner--text">Sponsors</span>
+                <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End CTA -->
+  <!-- Announcements -->
+  <!-- <div id="announcements">
+    <section class="slice slice-lg bg-gradient-dark">
+      <div class="container ">
+        <div class="row row-grid align-items-center">
+          <div class="col-lg-5 order-lg-1 ml-lg-auto">
+            <h1 class="mt-2 text-white">Annoucements</h1>
+            <p class="lead mt-4 text-white">Our annual kickoff meeting, WTF is Blockchain, will be held Saturday,
+              October 9th from 4:30pm - 6:00pm at Savery Hall, room 260. This event is taking place on the UW Seattle
+              campus,
+              but it is a tri-campus event. We also welcome sponsors, faculty, and anoyone interested in blockchain
+              to attend. Please be ready to show proof of vaccination at the door and remember that masks are required
+              at all times during the event. We will feature introductions, a presentation, two alumni as guest
+              speakers, and
+              networking opportunities at the end. </p>
+          </div>
+          <div class="col-lg-6 order-lg-2" style="padding-left: 10%;">
+            <img alt="Image placeholder" src="images/kickoffflyerpic.png" class="" style="width: 80%">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div> -->
+  <!-- End Announcements -->
+  <!--Sponsors -->
+  <!-- <div id="sponsors" >
+          <section class="slice slice-lg">
+            <div class="text-center">
+                <h1 class="text-white">Sponsors & partners</h1>
+            </div>
+            <br><br>
+            <div class="container ">
+              <div class="row row-grid align-items-center">
+                <div class="order-lg-1"
+                style="padding-left: 4%;">
+                <a href="https://ftx.us/">
+                  <img
+                  alt="FTX Logo" src="images/ftxnewlogo.png"
+                  class=""
+                  style="width: 12%"></a>
+                <a href="https://confluxnetwork.org/en/">
+                  <img
+                  alt="Conflux Logo" src="images/confluxlogo.png"
+                  class=""
+                  style="width: 15%; padding-left: 5%;">
+                </a>
+                <a href="https://near.org/">
+                  <img
+                  alt="NEAR Logo" src="https://near.org/wp-content/themes/near-19/assets/img/neue/logomark-white.svg?t=1600963474"
+                  class=""
+                  style="width: 15%; padding-left: 5%;">
+                </a>
+                <a href="https://blockchainacceleration.org">
+                  <img
+                  alt="BAF Logo" src="images/bafnewlogo.png"
+                  class=""
+                  style="width: 20%; padding-left: 5%;">
+                </a>
+                <a href="https://www.prasaga.com/">
+                  <img
+                  alt="Prasaga Logo" src="images/prasagalogo.png"
+                  class=""
+                  style="width: 17%; padding-left: 5%">
+                </a>
+                <a href="https://www.sperax.io/">
+                  <img
+                  alt="Sperax Logo" src="images/speraxlogo.png"
+                  class=""
+                  style="width: 15%; padding-left: 5%">
+                </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div> -->
+  <!-- End Sponsors -->
   <!-- Contact -->
-  <div id="call-to-action-call-to-action-3">
+  <div id="call-to-action-call-to-action-3" title="call-to-action/call-to-action-3.html">
     <section class="slice slice-xl overflow-hidden bg-gradient-dark delimiter-top delimiter-bottom">
+      <!-- SVG background -->
+      <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
+      </div>
       <div class="container position-relative zindex-100">
         <div class="text-center">
           <h6 class="text-white">- Contact Us -</h6>
-          <p class="lead text-white lh-180">
-            Want to get involved? Want to learn more? Have questions or comments?
-            Join our Discord server here: 
-            <a class="text-white" href="https://discord.gg/rarJ9QpyMb" style="text-decoration: underline;">
-              UW Blockchain Society Discord Server
-            </a>
-          </p>
+          <div class="fluid-paragraph mt-4 text-left">
+            <p class="lead text-white lh-180">Want to get involved? Want to learn more? Have questions or comments?
+              Join our Discord server here : <a class="text-white" href="https://discord.gg/rarJ9QpyMb", style="text-decoration: underline;">UW Blockchain Society Discord Server</a></p>
+
+          </div>
         </div>
       </div>
     </section>
   </div>
-
-  <footer class="footer p-0 footer-dark bg-gradient-dark">
-    <div class="container">
-      <div class="py-4">
-        <div class="row align-items-md-center">
-          <div class="col-md-4 mb-4 mb-md-0">
-            <div class="d-flex align-items-center">
-              <p class="text-sm mb-0">&copy; UW Blockchain Society. 2024. All rights reserved.</p>
+  <!-- Footer -->
+  <div id="footers-footer-2" title="footers/footer-2.html">
+    <footer class="footer p-0 footer-dark bg-gradient-dark" id="footer-main">
+      <div class="container">
+        <div class="py-4">
+          <div class="row align-items-md-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="d-flex align-items-center">
+                <p class="text-sm mb-0">&copy; UW Blockchain Society. 2023. All rights reserved.</p>
+              </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link" href="mailto:blockchn@uw.edu">blockchn@uw.edu</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
-              <li class="nav-item">
-                <a class="nav-link" href="https://twitter.com/udubblockchain" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.instagram.com/uwblockchain/" target="_blank">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/uwblockchain" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.facebook.com/BlockchainSocietyUW" target="_blank">
-                  <i class="fab fa-facebook"></i>
-                </a>
-              </li>
-            </ul>
+            <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
+              <ul class="nav justify-content-center">
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="https://uwbce.com">Annual Conference</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="mailto:blockchn@uw.edu">blockchn@uw.edu</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/udubblockchain" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.instagram.com/uwblockchain/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/uwblockchain" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.facebook.com/BlockchainSocietyUW" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
+  <!-- end footer -->
+  <script src="" async defer></script>
 </body>
+
 </html>
