@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+/* Theme variables */
+:root {
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --muted: #9CA3AF;
+  --electric: #6A0DFF; /* primary */
+  --electric-alt: #7C3AED; /* accent */
+}
+
+/* Tailwind inline theme mappings */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: IBM Plex Sans, system-ui, sans-serif;
+  --font-mono: JetBrains Mono, monospace;
+}
+
+/* Base layout: high-contrast dark with depth */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: IBM Plex Sans, system-ui, sans-serif;
+}
+
+/* Atmospheric background: faint grid + radial glow */
+body {
+  background-image:
+    radial-gradient(1000px 500px at 50% -50%, rgba(124,58,237,0.25), rgba(0,0,0,0) 70%),
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    24px 24px,
+    24px 24px;
+  background-position:
+    center,
+    0 0,
+    0 0;
+}
+
+/* Subtle grain overlay for depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><filter id="n" x="0" y="0"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.05"/></svg>');
+  opacity: 0.6;
+}
+
+/* Utility: glowing accent border */
+.accent-glow {
+  box-shadow: 0 0 40px rgba(106, 13, 255, 0.35);
+}

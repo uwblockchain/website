@@ -1,5 +1,11 @@
 {
   "version": 2,
   "name": "Blockchain Society at the UW",
-  "alias": ["uwblockchain.org", "www.uwblockchain.org"]
+  "alias": ["uwblockchain.org", "www.uwblockchain.org"],
+  "builds": [
+    { "src": "uwb-rebrand/package.json", "use": "@vercel/next" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "uwb-rebrand/$1" }
+  ]
 }
